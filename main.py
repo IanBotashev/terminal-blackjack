@@ -13,7 +13,7 @@ def main():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser("python3 main.py")
+    parser = argparse.ArgumentParser(description="Plays a game of blackjack in the terminal.")
     parser.add_argument("-l", "--loop", action="store_true", help="if set to true, makes the game continuously run in a loop.")
     args = parser.parse_args()
 
