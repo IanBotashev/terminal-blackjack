@@ -36,8 +36,3 @@ class Hand:
             result += value_to_add
 
         return result
-
-
-if __name__ == "__main__":
-    hand = Hand([Card(Suit.CLUBS, Face.KING, False), Card(Suit.CLUBS, Face.TWO, False), Card(Suit.CLUBS, Face.ACE, False)])
-    print(hand.get_hand_value())

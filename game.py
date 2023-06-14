@@ -63,6 +63,7 @@ class Game:
         print(f"Your final value: {self.human.hand.get_hand_value()}")
         print(f"Dealer's final value: {self.dealer.hand.get_hand_value()}")
         self.announce_winner()
+        print("=" * len(final_hand_string))
 
     def player_handler(self):
         """Handles player input."""
@@ -95,13 +96,13 @@ class Game:
         if (player_value == MAX_HAND_VALUE and len(self.human.hand.cards) == 2) or (dealer_value == MAX_HAND_VALUE and len(self.dealer.hand.cards) == 2):
             print("Blackjack.")
 
+        print("---", end="")
         if (dealer_value < player_value <= MAX_HAND_VALUE) or (dealer_value > MAX_HAND_VALUE >= player_value):
             print("You win.")
         elif (player_value <= dealer_value <= MAX_HAND_VALUE) or (dealer_value <= MAX_HAND_VALUE < player_value):
             print("Dealer wins.")
         else:
             print("No one wins.")
-
 
     @staticmethod
     def generate_cards():
