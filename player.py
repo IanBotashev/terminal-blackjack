@@ -24,7 +24,7 @@ class Player:
         """For AI players, decides what they should do."""
         if self.staying:
             return
-        if self.chance_to_lose() < 0.6:
+        if self.chance_to_lose() < 0.6 and self.hand.get_hand_value() < MAX_HAND_VALUE:
             print("dealer hit.")
             self.hit()
         else:
